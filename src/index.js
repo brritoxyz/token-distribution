@@ -5,6 +5,7 @@ const { mainnet } = require("viem/chains");
 const { RUMAS } = require("./constants");
 const collectionAbi = require("./abi/collection.json");
 const getOwners = require("./getOwners");
+const getTransactions = require("./getTransactions");
 
 const client = createPublicClient({
     chain: mainnet,
@@ -20,3 +21,5 @@ const collectionContract = getContract({
 
 // Retrieve the list of Rumas NFT token holders at the time of the snapshot (1 block after the mint ended).
 getOwners(collectionContract);
+
+getTransactions();
