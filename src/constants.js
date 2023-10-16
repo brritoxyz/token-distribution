@@ -12,6 +12,7 @@ const ETHERSCAN_API = {
 
 const FILEPATHS = {
     OWNERS: `${__dirname}/data/owners.json`,
+    TESTERS: `${__dirname}/data/testers.json`,
     TRANSACTIONS: `${__dirname}/data/transactions.json`,
 };
 
