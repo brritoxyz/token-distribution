@@ -9,16 +9,14 @@ const getTransactions = require("./getTransactions");
 const getTesters = require("./getTesters");
 const getMetadata = require("./getMetadata");
 
-const client = createPublicClient({
-    chain: mainnet,
-    transport: http(process.env.RPC_URL),
-    batch: { multicall: true },
-});
-
 const collectionContract = getContract({
     address: RUMAS.CONTRACT_ADDRESS,
     abi: collectionAbi,
-    publicClient: client,
+    publicClient: createPublicClient({
+        chain: mainnet,
+        transport: http(process.env.RPC_URL),
+        batch: { multicall: true },
+    }),
 });
 
 // Retrieve the list of Rumas NFT token holders at the time of the snapshot (1 block after the mint ended).
