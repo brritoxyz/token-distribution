@@ -7,6 +7,7 @@ const collectionAbi = require("./abi/collection.json");
 const getOwners = require("./getOwners");
 const getTransactions = require("./getTransactions");
 const getTesters = require("./getTesters");
+const getMetadata = require("./getMetadata");
 
 const client = createPublicClient({
     chain: mainnet,
@@ -28,3 +29,6 @@ getTransactions();
 
 // Get the beta test addresses and tally up their gas usage.
 getTesters();
+
+// Retrieve the metadata for the minted Rumas NFTs.
+getMetadata();
