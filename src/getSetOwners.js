@@ -1,13 +1,17 @@
 const fs = require("fs");
 const { RUMAS, FILEPATHS } = require("./constants");
 
+const ENCODING = { encoding: "utf-8" };
+
+// The color with the lowest count (number of IDs) is the number of sets the owner has.
+const getSetCount = (colorsToIds) =>
+    Object.values(colorsToIds).sort((a, b) => {
+        return a.length - b.length;
+    })[0].length;
+
 module.exports = () => {
-    const owners = JSON.parse(
-        fs.readFileSync(FILEPATHS.OWNERS, { encoding: "utf-8" })
-    );
-    const metadata = JSON.parse(
-        fs.readFileSync(FILEPATHS.METADATA, { encoding: "utf-8" })
-    );
+    const owners = JSON.parse(fs.readFileSync(FILEPATHS.OWNERS, ENCODING));
+    const metadata = JSON.parse(fs.readFileSync(FILEPATHS.METADATA, ENCODING));
     const formattedSetOwners = Object.keys(owners).reduce(
         (setOwners, ownerAddress) => {
             const { totalOwned, ownerOf } = owners[ownerAddress];
@@ -46,10 +50,7 @@ module.exports = () => {
             return {
                 ...setOwners,
                 [ownerAddress]: {
-                    // The color with the lowest count is the number of sets the owner has.
-                    totalSets: Object.values(colorsToIds).sort((a, b) => {
-                        return a.length - b.length;
-                    })[0].length,
+                    totalSets: getSetCount(colorsToIds),
                     colorsToIds,
                 },
             };
