@@ -5,6 +5,7 @@ const RUMAS = {
     CUTOFF_BLOCK_NUMBER: 18360406,
     METADATA_IPFS:
         "https://turquoise-mean-galliform-886.mypinata.cloud/ipfs/QmZcxuBeDHJektLRXVASi4gWe2oB7Q6ZcySNgqu6S1Bwq3?_gl=1*o1u6fn*_ga*MTg4NjExMTc3Ny4xNjk3NDY2Nzg3*_ga_5RMPXG14TE*MTY5NzU0ODMzNC40LjAuMTY5NzU0ODMzNS41OS4wLjA.",
+    COLOR_ATTRIBUTES_INDEX: 0,
 };
 
 const ETHERSCAN_API = {
@@ -17,6 +18,7 @@ const FILEPATHS = {
     TESTERS: `${__dirname}/data/testers.json`,
     TRANSACTIONS: `${__dirname}/data/transactions.json`,
     METADATA: `${__dirname}/data/metadata.json`,
+    SET_OWNERS: `${__dirname}/data/setOwners.json`,
 };
 
 module.exports = {

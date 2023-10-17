@@ -8,6 +8,7 @@ const getOwners = require("./getOwners");
 const getTransactions = require("./getTransactions");
 const getTesters = require("./getTesters");
 const getMetadata = require("./getMetadata");
+const getSetOwners = require("./getSetOwners");
 
 const collectionContract = getContract({
     address: RUMAS.CONTRACT_ADDRESS,
@@ -30,3 +31,6 @@ getTesters();
 
 // Retrieve the metadata for the minted Rumas NFTs.
 getMetadata();
+
+// Get the number of sets owned by each address.
+getSetOwners();
