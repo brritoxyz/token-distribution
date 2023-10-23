@@ -1,5 +1,6 @@
 const fs = require("fs");
 const { RUMAS, FILEPATHS } = require("./constants");
+const fsWriteFileSyncJSON = require("./utils/fsWriteFileSyncJSON");
 
 const ENCODING = { encoding: "utf-8" };
 
@@ -58,5 +59,5 @@ module.exports = () => {
         {}
     );
 
-    fs.writeFileSync(FILEPATHS.SET_OWNERS, JSON.stringify(formattedSetOwners));
+    fsWriteFileSyncJSON(FILEPATHS.SET_OWNERS, formattedSetOwners);
 };

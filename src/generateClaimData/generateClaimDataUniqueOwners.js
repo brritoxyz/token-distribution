@@ -1,6 +1,6 @@
-const fs = require("fs");
-const { TOKEN_CLAIM_AMOUNTS, FILEPATHS } = require("./constants");
-const getMerkleClaimData = require("./utils/getMerkleClaimData");
+const { TOKEN_CLAIM_AMOUNTS, FILEPATHS } = require("../constants");
+const getMerkleClaimData = require("../utils/getMerkleClaimData");
+const fsWriteFileSyncJSON = require("../utils/fsWriteFileSyncJSON");
 
 (() => {
     // Please reference src/data/owners.json for verifying the below.
@@ -17,11 +17,8 @@ const getMerkleClaimData = require("./utils/getMerkleClaimData");
         ],
     ];
 
-    fs.writeFileSync(
-        FILEPATHS.CLAIM_DATA_UNIQUE_OWNERS,
-        JSON.stringify({
-            ...getMerkleClaimData(uniqueOwnerClaims),
-            data: uniqueOwnerClaims,
-        })
-    );
+    fsWriteFileSyncJSON(FILEPATHS.CLAIM_DATA_UNIQUE_OWNERS, {
+        ...getMerkleClaimData(uniqueOwnerClaims),
+        data: uniqueOwnerClaims,
+    });
 })();

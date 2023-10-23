@@ -1,9 +1,9 @@
-const fs = require("fs");
 const { get } = require("axios");
 const { RUMAS, FILEPATHS } = require("./constants");
+const fsWriteFileSyncJSON = require("./utils/fsWriteFileSyncJSON");
 
 module.exports = async () => {
     const { data } = await get(RUMAS.METADATA_IPFS);
 
-    fs.writeFileSync(FILEPATHS.METADATA, JSON.stringify(data));
+    fsWriteFileSyncJSON(FILEPATHS.METADATA, data);
 };

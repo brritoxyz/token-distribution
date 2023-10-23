@@ -1,6 +1,6 @@
-const fs = require("fs");
 const transactions = require("./data/transactions.json");
 const { FILEPATHS } = require("./constants");
+const fsWriteFileSyncJSON = require("./utils/fsWriteFileSyncJSON");
 
 module.exports = () => {
     const data = transactions.reduce((testers, { hash, from, gasUsed }) => {
@@ -27,5 +27,5 @@ module.exports = () => {
         return testers;
     }, {});
 
-    fs.writeFileSync(FILEPATHS.TESTERS, JSON.stringify(data));
+    fsWriteFileSyncJSON(FILEPATHS.TESTERS, data);
 };

@@ -1,7 +1,7 @@
-const fs = require("fs");
-const setOwners = require("./data/setOwners.json");
-const { TOKEN_CLAIM_AMOUNTS, FILEPATHS } = require("./constants");
-const getMerkleClaimData = require("./utils/getMerkleClaimData");
+const setOwners = require("../data/setOwners.json");
+const { TOKEN_CLAIM_AMOUNTS, FILEPATHS } = require("../constants");
+const getMerkleClaimData = require("../utils/getMerkleClaimData");
+const fsWriteFileSyncJSON = require("../utils/fsWriteFileSyncJSON");
 
 (() => {
     const setOwnerClaims = Object.keys(setOwners).reduce(
@@ -22,11 +22,8 @@ const getMerkleClaimData = require("./utils/getMerkleClaimData");
         []
     );
 
-    fs.writeFileSync(
-        FILEPATHS.CLAIM_DATA_SET_OWNERS,
-        JSON.stringify({
-            ...getMerkleClaimData(setOwnerClaims),
-            data: setOwnerClaims,
-        })
-    );
+    fsWriteFileSyncJSON(FILEPATHS.CLAIM_DATA_SET_OWNERS, {
+        ...getMerkleClaimData(setOwnerClaims),
+        data: setOwnerClaims,
+    });
 })();

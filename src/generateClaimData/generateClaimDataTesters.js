@@ -1,7 +1,7 @@
-const fs = require("fs");
-const testers = require("./data/testers.json");
-const { TOKEN_CLAIM_AMOUNTS, FILEPATHS } = require("./constants");
-const getMerkleClaimData = require("./utils/getMerkleClaimData");
+const testers = require("../data/testers.json");
+const { TOKEN_CLAIM_AMOUNTS, FILEPATHS } = require("../constants");
+const getMerkleClaimData = require("../utils/getMerkleClaimData");
+const fsWriteFileSyncJSON = require("../utils/fsWriteFileSyncJSON");
 
 (() => {
     const allGasUsed = Object.values(testers).reduce(
@@ -23,11 +23,8 @@ const getMerkleClaimData = require("./utils/getMerkleClaimData");
         []
     );
 
-    fs.writeFileSync(
-        FILEPATHS.CLAIM_DATA_TESTERS,
-        JSON.stringify({
-            ...getMerkleClaimData(testerClaims),
-            data: testerClaims,
-        })
-    );
+    fsWriteFileSyncJSON(FILEPATHS.CLAIM_DATA_TESTERS, {
+        ...getMerkleClaimData(testerClaims),
+        data: testerClaims,
+    });
 })();

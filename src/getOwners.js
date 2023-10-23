@@ -1,5 +1,5 @@
-const fs = require("fs");
 const { RUMAS, FILEPATHS } = require("./constants");
+const fsWriteFileSyncJSON = require("./utils/fsWriteFileSyncJSON");
 
 module.exports = async (contractInstance) => {
     const owners = {};
@@ -39,5 +39,5 @@ module.exports = async (contractInstance) => {
         }
     }
 
-    fs.writeFileSync(FILEPATHS.OWNERS, JSON.stringify(owners));
+    fsWriteFileSyncJSON(FILEPATHS.OWNERS, owners);
 };
