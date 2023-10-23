@@ -1,7 +1,7 @@
 const fs = require("fs");
-const { StandardMerkleTree } = require("@openzeppelin/merkle-tree");
 const owners = require("./data/owners.json");
 const { TOKEN_CLAIM_AMOUNTS, FILEPATHS } = require("./constants");
+const getMerkleClaimData = require("./utils/getMerkleClaimData");
 
 (() => {
     const ownerClaims = Object.keys(owners).reduce(
@@ -16,13 +16,12 @@ const { TOKEN_CLAIM_AMOUNTS, FILEPATHS } = require("./constants");
         ],
         []
     );
-    const tree = StandardMerkleTree.of(ownerClaims, ["address", "uint256"]);
-    const proofs = {};
-
-    for (const [i, v] of tree.entries()) proofs[v[0]] = tree.getProof(i);
 
     fs.writeFileSync(
         FILEPATHS.CLAIM_DATA_OWNERS,
-        JSON.stringify({ root: tree.root, proofs, data: ownerClaims })
+        JSON.stringify({
+            ...getMerkleClaimData(ownerClaims),
+            data: ownerClaims,
+        })
     );
 })();

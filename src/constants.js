@@ -20,10 +20,12 @@ const FILEPATHS = {
     METADATA: `${__dirname}/data/metadata.json`,
     SET_OWNERS: `${__dirname}/data/setOwners.json`,
     CLAIM_DATA_OWNERS: `${__dirname}/claimData/owners.json`,
+    CLAIM_DATA_SET_OWNERS: `${__dirname}/claimData/setOwners.json`,
 };
 
 const TOKEN_CLAIM_AMOUNTS = {
     OWNER: BigInt(77_763),
+    SET_OWNER: BigInt(155_526),
 };
 
 module.exports = {
