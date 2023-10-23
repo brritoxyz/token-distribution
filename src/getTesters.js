@@ -1,8 +1,9 @@
-const transactions = require("./data/transactions.json");
+const fs = require("fs");
 const { FILEPATHS } = require("./constants");
 const fsWriteFileSyncJSON = require("./utils/fsWriteFileSyncJSON");
 
 module.exports = () => {
+    const transactions = JSON.parse(fs.readFileSync(FILEPATHS.TRANSACTIONS));
     const data = transactions.reduce((testers, { hash, from, gasUsed }) => {
         // Exclude transactions from the following team addresses.
         if (

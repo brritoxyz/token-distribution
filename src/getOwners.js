@@ -1,11 +1,23 @@
+const { createPublicClient, getContract, http } = require("viem");
+const { mainnet } = require("viem/chains");
+const collectionAbi = require("./abi/collection.json");
 const { RUMAS, FILEPATHS } = require("./constants");
 const fsWriteFileSyncJSON = require("./utils/fsWriteFileSyncJSON");
 
-module.exports = async (contractInstance) => {
+module.exports = async () => {
+    const collectionContract = getContract({
+        address: RUMAS.CONTRACT_ADDRESS,
+        abi: collectionAbi,
+        publicClient: createPublicClient({
+            chain: mainnet,
+            transport: http(process.env.RPC_URL),
+            batch: { multicall: true },
+        }),
+    });
     const owners = {};
 
     for (let i = 1; i <= RUMAS.LAST_TOKEN_ID; ++i) {
-        let owner = await contractInstance.read.ownerOf({
+        let owner = await collectionContract.read.ownerOf({
             args: [i],
             blockNumber: RUMAS.CUTOFF_BLOCK_NUMBER,
         });
@@ -20,7 +32,7 @@ module.exports = async (contractInstance) => {
         // Get the actual owner if the token is listed (i.e. the Rumas contract is custodying it).
         if (owner === RUMAS.CONTRACT_ADDRESS) {
             owner = (
-                await contractInstance.read.listings({
+                await collectionContract.read.listings({
                     args: [i],
                     blockNumber: RUMAS.CUTOFF_BLOCK_NUMBER,
                 })
