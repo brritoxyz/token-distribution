@@ -11,7 +11,6 @@ module.exports = async () => {
         publicClient: createPublicClient({
             chain: mainnet,
             transport: http(process.env.RPC_URL),
-            batch: { multicall: true },
         }),
     });
     const owners = {};
