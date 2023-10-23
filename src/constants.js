@@ -21,12 +21,16 @@ const FILEPATHS = {
     SET_OWNERS: `${__dirname}/data/setOwners.json`,
     CLAIM_DATA_OWNERS: `${__dirname}/claimData/owners.json`,
     CLAIM_DATA_SET_OWNERS: `${__dirname}/claimData/setOwners.json`,
+    CLAIM_DATA_UNIQUE_OWNERS: `${__dirname}/claimData/uniqueOwners.json`,
     CLAIM_DATA_TESTERS: `${__dirname}/claimData/testers.json`,
 };
 
 const TOKEN_CLAIM_AMOUNTS = {
     OWNER: BigInt(77_763),
     SET_OWNER: BigInt(155_526),
+    // This is a special bonus to owners of 1 of 1s ("uniques") which was previously promised.
+    // There are only 2 so they will be handled manually.
+    UNIQUE_OWNER: BigInt(155_526),
     // This is split proportionately amongst *all* beta testers based on their share of the total gas usage.
     BETA_TESTERS_TOTAL: BigInt(10_000_000),
 };
