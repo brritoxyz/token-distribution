@@ -19,10 +19,16 @@ const FILEPATHS = {
     TRANSACTIONS: `${__dirname}/data/transactions.json`,
     METADATA: `${__dirname}/data/metadata.json`,
     SET_OWNERS: `${__dirname}/data/setOwners.json`,
+    CLAIM_DATA_OWNERS: `${__dirname}/claimData/owners.json`,
+};
+
+const TOKEN_CLAIM_AMOUNTS = {
+    OWNER: BigInt(77_763),
 };
 
 module.exports = {
     RUMAS,
     ETHERSCAN_API,
     FILEPATHS,
+    TOKEN_CLAIM_AMOUNTS,
 };
