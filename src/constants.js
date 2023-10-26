@@ -25,14 +25,18 @@ const FILEPATHS = {
     CLAIM_DATA_TESTERS: `${__dirname}/claimData/testers.json`,
 };
 
+// Multiplied against reward amounts to account for the token's 18 decimals.
+const TOKEN_DECIMAL_PRECISION = BigInt(1e18);
+
 const TOKEN_CLAIM_AMOUNTS = {
-    OWNER: BigInt(77_763),
-    SET_OWNER: BigInt(155_526),
+    // Multiply to avoid precision loss.
+    OWNER: BigInt(77_763) * TOKEN_DECIMAL_PRECISION,
+    SET_OWNER: BigInt(155_526) * TOKEN_DECIMAL_PRECISION,
     // This is a special bonus to owners of 1 of 1s ("uniques") which was previously promised.
     // There are only 2 so they will be handled manually.
-    UNIQUE_OWNER: BigInt(155_526),
+    UNIQUE_OWNER: BigInt(155_526) * TOKEN_DECIMAL_PRECISION,
     // This is split proportionately amongst *all* beta testers based on their share of the total gas usage.
-    BETA_TESTERS_TOTAL: BigInt(10_000_000),
+    BETA_TESTERS_TOTAL: BigInt(10_000_000) * TOKEN_DECIMAL_PRECISION,
 };
 
 module.exports = {
