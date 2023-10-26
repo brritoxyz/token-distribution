@@ -1,34 +1,4 @@
 {
-    "0x61ABf360FEe2b472b8E6dCD94215120259A95Dd7": {
-        "totalSets": 0,
-        "colorsToIds": {
-            "Red": [
-                2,
-                22,
-                23,
-                26,
-                31
-            ],
-            "Purple": [
-                30
-            ],
-            "Gold": [],
-            "Black": [
-                27,
-                32,
-                322,
-                388
-            ],
-            "Green": [],
-            "White": [
-                24,
-                25,
-                33,
-                39
-            ],
-            "Pink": []
-        }
-    },
     "0x3d5AD53df00967702B4f5135f360c1c3DB433579": {
         "totalSets": 1,
         "colorsToIds": {
@@ -216,109 +186,6 @@
             ]
         }
     },
-    "0x87e32D4631D728d6aD7EBcD133b11FeBC9DA9b93": {
-        "totalSets": 0,
-        "colorsToIds": {
-            "Red": [
-                59,
-                99,
-                102
-            ],
-            "Purple": [
-                98,
-                103
-            ],
-            "Gold": [
-                58,
-                80
-            ],
-            "Black": [
-                53
-            ],
-            "Green": [],
-            "White": [
-                83,
-                104
-            ],
-            "Pink": []
-        }
-    },
-    "0xb978C8Da8729c514bB08B40d2409E5D5F6982E1f": {
-        "totalSets": 0,
-        "colorsToIds": {
-            "Red": [
-                66
-            ],
-            "Purple": [
-                64
-            ],
-            "Gold": [
-                85
-            ],
-            "Black": [
-                74
-            ],
-            "Green": [],
-            "White": [
-                77,
-                84
-            ],
-            "Pink": [
-                62
-            ]
-        }
-    },
-    "0x75d415edcB3c3782E5952470821e983f9053a209": {
-        "totalSets": 0,
-        "colorsToIds": {
-            "Red": [
-                76
-            ],
-            "Purple": [
-                87,
-                89
-            ],
-            "Gold": [
-                71,
-                86
-            ],
-            "Black": [
-                79,
-                88
-            ],
-            "Green": [
-                73,
-                75,
-                82
-            ],
-            "White": [
-                68
-            ],
-            "Pink": []
-        }
-    },
-    "0x7BFEe91193d9Df2Ac0bFe90191D40F23c773C060": {
-        "totalSets": 0,
-        "colorsToIds": {
-            "Red": [],
-            "Purple": [],
-            "Gold": [],
-            "Black": [
-                113
-            ],
-            "Green": [],
-            "White": [
-                127,
-                128,
-                129,
-                130
-            ],
-            "Pink": [
-                136,
-                137
-            ]
-        }
-    },
     "0xb888f9f40F6007C06681306bba976F5e25691E1b": {
         "totalSets": 1,
         "colorsToIds": {
@@ -420,78 +287,6 @@
                 259,
                 425
             ]
-        }
-    },
-    "0xfC4B2a62A06cb2E1C6A743E9aE327Bb16977E4c1": {
-        "totalSets": 0,
-        "colorsToIds": {
-            "Red": [
-                209,
-                210,
-                214
-            ],
-            "Purple": [],
-            "Gold": [],
-            "Black": [
-                213
-            ],
-            "Green": [
-                212,
-                215
-            ],
-            "White": [
-                211
-            ],
-            "Pink": []
-        }
-    },
-    "0x8625AfdbF3744D433D850c681Ba881d028253c8A": {
-        "totalSets": 0,
-        "colorsToIds": {
-            "Red": [],
-            "Purple": [],
-            "Gold": [
-                217,
-                219
-            ],
-            "Black": [
-                218,
-                467,
-                472
-            ],
-            "Green": [],
-            "White": [
-                327,
-                468
-            ],
-            "Pink": []
-        }
-    },
-    "0x2fcC020F72E5d2EdD2a24D04f3Dc90D7fDFbD1DD": {
-        "totalSets": 0,
-        "colorsToIds": {
-            "Red": [],
-            "Purple": [
-                242,
-                249
-            ],
-            "Gold": [
-                243,
-                246,
-                247
-            ],
-            "Black": [
-                244,
-                245,
-                251
-            ],
-            "Green": [
-                250
-            ],
-            "White": [
-                248
-            ],
-            "Pink": []
         }
     },
     "0x2262323e0D140Bf96a72B974fB34F07caAdF4c30": {
@@ -605,34 +400,6 @@
             ]
         }
     },
-    "0xa669070D106E96CC2390523E9745B425a1b3a0E0": {
-        "totalSets": 0,
-        "colorsToIds": {
-            "Red": [
-                340,
-                343
-            ],
-            "Purple": [
-                349
-            ],
-            "Gold": [
-                342
-            ],
-            "Black": [],
-            "Green": [
-                348
-            ],
-            "White": [
-                346
-            ],
-            "Pink": [
-                341,
-                344,
-                345,
-                347
-            ]
-        }
-    },
     "0xBa03Ba802059269F7Edc976F008D2e8EaA7EdD9f": {
         "totalSets": 1,
         "colorsToIds": {
@@ -663,56 +430,6 @@
                 370,
                 375,
                 377
-            ]
-        }
-    },
-    "0xF3e71a033bB54f49AB58217a3A95F195038D9E8F": {
-        "totalSets": 0,
-        "colorsToIds": {
-            "Red": [
-                394,
-                398,
-                399
-            ],
-            "Purple": [],
-            "Gold": [],
-            "Black": [
-                400
-            ],
-            "Green": [
-                395,
-                396,
-                402,
-                403
-            ],
-            "White": [],
-            "Pink": [
-                397,
-                401
-            ]
-        }
-    },
-    "0xb1c6bCd66322E1d21aC1Bd71FFc6b570A1E67b80": {
-        "totalSets": 0,
-        "colorsToIds": {
-            "Red": [
-                435
-            ],
-            "Purple": [],
-            "Gold": [
-                459,
-                461
-            ],
-            "Black": [],
-            "Green": [],
-            "White": [
-                434,
-                436
-            ],
-            "Pink": [
-                430,
-                437,
-                460
             ]
         }
     }

@@ -45,11 +45,14 @@ module.exports = () => {
                     Pink: [],
                 }
             );
+            const totalSets = getSetCount(colorsToIds);
+
+            if (totalSets === 0) return setOwners;
 
             return {
                 ...setOwners,
                 [ownerAddress]: {
-                    totalSets: getSetCount(colorsToIds),
+                    totalSets,
                     colorsToIds,
                 },
             };
