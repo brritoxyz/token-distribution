@@ -8,12 +8,12 @@ const fsWriteFileSyncJSON = require("../utils/fsWriteFileSyncJSON");
         // #69: Mystery.
         [
             "0x75d415edcB3c3782E5952470821e983f9053a209",
-            TOKEN_CLAIM_AMOUNTS.UNIQUE_OWNER.toString(),
+            TOKEN_CLAIM_AMOUNTS.UNIQUE_OWNER,
         ],
         // #420: Anatomy.
         [
             "0x903f84fb1DfaCEfdAC0DEa758d58DF0FF5f71ffe",
-            TOKEN_CLAIM_AMOUNTS.UNIQUE_OWNER.toString(),
+            TOKEN_CLAIM_AMOUNTS.UNIQUE_OWNER,
         ],
     ];
 

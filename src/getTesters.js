@@ -22,6 +22,7 @@ module.exports = () => {
             };
         } else {
             testers[from].totalGasUsed += gasUsed;
+
             testers[from].transactions.push(hash);
         }
 

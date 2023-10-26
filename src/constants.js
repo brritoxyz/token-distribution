@@ -34,7 +34,8 @@ const TOKEN_CLAIM_AMOUNTS = {
     SET_OWNER: BigInt(155_526) * TOKEN_DECIMAL_PRECISION,
     // This is a special bonus to owners of 1 of 1s ("uniques") which was previously promised.
     // There are only 2 so they will be handled manually.
-    UNIQUE_OWNER: BigInt(155_526) * TOKEN_DECIMAL_PRECISION,
+    // BigInt(155_526) * TOKEN_DECIMAL_PRECISION.
+    UNIQUE_OWNER: "155526000000000000000000",
     // This is split proportionately amongst *all* beta testers based on their share of the total gas usage.
     BETA_TESTERS_TOTAL: BigInt(10_000_000) * TOKEN_DECIMAL_PRECISION,
 };

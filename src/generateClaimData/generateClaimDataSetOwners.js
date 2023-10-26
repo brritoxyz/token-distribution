@@ -4,23 +4,13 @@ const getMerkleClaimData = require("../utils/getMerkleClaimData");
 const fsWriteFileSyncJSON = require("../utils/fsWriteFileSyncJSON");
 
 (() => {
-    const setOwnerClaims = Object.keys(setOwners).reduce(
-        (setOwnerClaims, setOwner) =>
-            // Exclude owners with 7 or more Rumas but zero sets.
-            setOwners[setOwner].totalSets === 0
-                ? setOwnerClaims
-                : [
-                      ...setOwnerClaims,
-                      [
-                          setOwner,
-                          (
-                              BigInt(setOwners[setOwner].totalSets) *
-                              TOKEN_CLAIM_AMOUNTS.SET_OWNER
-                          ).toString(),
-                      ],
-                  ],
-        []
-    );
+    const setOwnerClaims = Object.keys(setOwners).map((setOwner) => [
+        setOwner,
+        (
+            BigInt(setOwners[setOwner].totalSets) *
+            TOKEN_CLAIM_AMOUNTS.SET_OWNER
+        ).toString(),
+    ]);
 
     fsWriteFileSyncJSON(FILEPATHS.CLAIM_DATA_SET_OWNERS, {
         ...getMerkleClaimData(setOwnerClaims),
