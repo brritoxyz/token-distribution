@@ -13,5 +13,8 @@ To fetch and compile token distribution data:
 
 NOTE: Complete the steps above before proceeding.
 
-To generate the merkle roots and proofs used in carrying out token claims.
+To generate the merkle roots and proofs used in carrying out token claims:
 1. Run `node src/generateClaimData`.
+
+To generate the list of Rumas NFT airdrop recipients and the token IDs:
+1. Run `node src/generateRumasAirdrop`.
