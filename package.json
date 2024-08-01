@@ -12,6 +12,7 @@
   "dependencies": {
     "@openzeppelin/merkle-tree": "github:OpenZeppelin/merkle-tree",
     "axios": "^1.5.1",
+    "bignumber.js": "^9.1.2",
     "dotenv": "^16.3.1",
     "viem": "^1.16.5"
   },
