@@ -24,6 +24,7 @@ const FILEPATHS = {
     CLAIM_DATA_UNIQUE_OWNERS: `${__dirname}/claimData/uniqueOwners.json`,
     CLAIM_DATA_TESTERS: `${__dirname}/claimData/testers.json`,
     RUMAS_AIRDROP: `${__dirname}/airdropData/index.json`,
+    RUMAS_REFUND: `${__dirname}/refundData/index.json`,
 };
 
 // Multiplied against reward amounts to account for the token's 18 decimals.
